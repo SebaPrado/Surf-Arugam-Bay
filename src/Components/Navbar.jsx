@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../index.css";
 import {
   AppBar,
@@ -22,6 +22,20 @@ const theme = createTheme({
 
 function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [navbarColor, setNavbarColor] = useState("transparent");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setNavbarColor("rgba(255, 255, 255, 0.3)"); // Cambia a blanco con opacidad
+      } else {
+        setNavbarColor("transparent"); // Vuelve a transparente
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -33,9 +47,7 @@ function Navbar() {
     setDrawerOpen(open);
   };
 
-  const handleResumeClick = () => {
-    window.open(resumePDF, "_blank");
-  };
+ 
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -60,18 +72,25 @@ function Navbar() {
         <ThemeProvider theme={theme}>
           <Box className="nabvar-container  ">
             <AppBar
-              // position="static"
               className="navbar"
-              sx={{ backgroundColor: "green" }}
+              sx={{
+                backgroundColor: navbarColor,
+                transition: "background-color 1.5s ease", // Agrega esta línea para la transición
+                boxShadow: 'none'
+              }}
+              elevation={0}
             >
               <Toolbar className="custom-toolbar navbar2">
-                <div>Logo</div>
+                <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
+                  <img src="/arcticons_srilankan.png" alt="logo" style={{ marginRight: '10px' }} />
+                  <p style={{ paddingTop: '14px' }}>Arugam Bay</p>
+                </div>
 
                 <div className="one">
                   {" "}
                   <IconButton // boton hamburguesa
-                    edge="start"
-                    color="inherit"
+                    // edge="start"
+                    // color="inherit"
                     // aria-label="menu"
                     sx={{
                       mr: 2,
@@ -101,7 +120,14 @@ function Navbar() {
                       <Button
                         key={item.label}
                         className="custom-button"
-                        sx={{ color: "white" }}
+                        sx={{
+                          color: "white",
+                          fontFamily: "Open Sans",
+                          fontSize: "15px",
+                          fontWeight: 400,
+                          lineHeight: "21.79px",
+                          textAlign: "center",
+                        }}
                         onClick={item.onClick}
                       >
                         {item.label}
@@ -109,7 +135,9 @@ function Navbar() {
                     ))}
                   </Box>
                 </div>
-                <div className="three">HOla</div>
+                <div className="three">
+                  <button className="button1">I am an Instructor</button>
+                </div>
               </Toolbar>
             </AppBar>
           </Box>
@@ -137,7 +165,14 @@ function Navbar() {
                 >
                   <ListItemText
                     primary={item.label}
-                    sx={{ color: "white", textAlign: "center" }}
+                    sx={{
+                      color: "white",
+                      fontFamily: "Open Sans",
+                      fontSize: "26px",
+                      fontWeight: 400,
+                      lineHeight: "21.79px",
+                      textAlign: "center",
+                    }}
                   />
                 </ListItem>
               ))}

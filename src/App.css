@@ -1,12 +1,12 @@
 /* Estilos para el AppBar */
-.custom-app-bar {
+/* .custom-app-bar {
   width: 440px;
   height: 63px;
   box-shadow: none;
   border-radius: 9999px;
   overflow: hidden;
   background-color: rgb(166, 49, 49);
-}
+} */
 
 /* Estilos para el Toolbar */
 .custom-toolbar {
@@ -22,17 +22,17 @@
   /* align-items: center; */
   width: 100%;
   height: 100%;
-  background-color: #48da0f;
+  /* background-color: #3eda0f; */
 }
 
 /* Estilos para los botones */
-.custom-button {
+/* .custom-button {
   text-transform: none;
   border-radius: 9999px;
   padding: 2px 16px;
   height: calc(100% - 12px);
   color: white;
-}
+} */
 
 /* ========================    < NAVBAR         ========================== */
 
@@ -65,13 +65,13 @@
   padding-top: 20px;
   padding-bottom: 20px;
   width: 100%;
-  background-color: transparent;
+  background-color: transparent !important;
   transition: background-color 0.3s ease;
 }
 
-.nabvar-container.scrolled {
+/* .nabvar-container.scrolled {
   background-color: rgba(252, 255, 252, 0.25);
-}
+} */
 
 /* Estilos responsivos */
 
@@ -163,6 +163,7 @@
   width: 100%;
   background-color: transparent;
   transition: background-color 1.3s ease;
+  box-shadow: none !important;
 }
 
 /* Estilos responsivos */
@@ -174,7 +175,7 @@
 
   .custom-app-bar {
     max-width: 550px;
-    background-color:#48da0f !important;
+    /* background-color:#48da0f !important; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -262,7 +263,7 @@
 
 .divPadreBox{
   width: 80%;
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   flex-direction: row;
   justify-content: space-between !important;
@@ -273,21 +274,24 @@
   display: flex;
   flex-direction: row;
   width: 100%; 
-  background-color: #ff8c00;
+  /* background-color: #ff8c00; */
   justify-content: space-between !important;
   
 }
 
 .one{
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 .two{
-  background-color: aquamarine;
-  width: 20%;
+  /* background-color: aquamarine; */
+  width: 30%;
 }
 
 .three{
-  background-color: yellow;
+  /* background-color: yellow; */
+  width: 15%;
+  display: flex;
+ justify-content: center;
 }
 
 @media  (width< 600px) {
@@ -315,6 +319,22 @@
     order: 2; /* Luego el div con clase one */
     flex: 1; /* Permite que el div ocupe espacio */
   }
+}
+
+.logo{
+  /* background-color: aqua; */
+}
+
+.button1{
+  background-color: #055ea2;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.6px;
 }
 
 
