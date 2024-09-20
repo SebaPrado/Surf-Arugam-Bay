@@ -1,0 +1,487 @@
+/* Estilos para el AppBar */
+.custom-app-bar {
+  width: 440px;
+  height: 63px;
+  box-shadow: none;
+  border-radius: 9999px;
+  overflow: hidden;
+  background-color: rgb(166, 49, 49);
+}
+
+/* Estilos para el Toolbar */
+.custom-toolbar {
+  padding: 0 2px;
+  height: 100%;
+  min-height: 54px;
+}
+
+/* Estilos para el contenedor de botones */
+.button-container {
+  display: flex;
+  justify-content:space-evenly !important;
+  /* align-items: center; */
+  width: 100%;
+  height: 100%;
+  background-color: #48da0f;
+}
+
+/* Estilos para los botones */
+.custom-button {
+  text-transform: none;
+  border-radius: 9999px;
+  padding: 2px 16px;
+  height: calc(100% - 12px);
+  color: white;
+}
+
+/* ========================    < NAVBAR         ========================== */
+
+/* Estilos para el AppBar */
+.custom-app-bar {
+  width: 100%;
+  max-width: 440px;
+  height: 62px;
+}
+
+/* Estilos para los botones */
+.custom-button {
+  text-transform: none !important;
+  border-radius: 9999px !important;
+  padding: 2px 16px !important;
+  height: calc(100% - 12px) !important;
+  color: white;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.custom-button:hover {
+  background-color: white !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+/* Estilos para el contenedor principal */
+.nabvar-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.nabvar-container.scrolled {
+  background-color: rgba(252, 255, 252, 0.25);
+}
+
+/* Estilos responsivos */
+
+@media screen and (max-width: 600px) {
+  .custom-app-bar {
+    max-width: 100%;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 56px;
+  }
+
+  /* .custom-toolbar {
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  } */
+
+  /* Ajuste del tamaño y posición del botón hamburguesa */
+  .menu-icon-button {
+    padding: 8px !important;
+    margin: 0 16px 0 0 !important;
+    color: black !important; /* Cambia el color del icono a negro */
+  }
+
+  /* Eliminar el margen izquierdo adicional */
+  .MuiIconButton-edgeStart {
+    margin-left: 0 !important;
+  }
+
+  .navbar2 {
+    display: flex; /* Asegúrate de que el contenedor sea flex */
+    flex-direction: row; /* Mantén la dirección en fila */
+    justify-content: space-between; /* Asegúrate de que haya espacio entre los elementos */
+    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho */
+  }
+
+  .one {
+    order: 1; /* Primero el div con clase one */
+    flex: 0 0 auto; /* No permite que el div crezca */
+  }
+
+  .two {
+    order: 2; /* Luego el div con clase two */
+    flex: 1; /* Permite que el div ocupe espacio */
+    text-align: center; /* Centra el texto en el div */
+  }
+}
+
+/* Ocultar el botón hamburguesa en pantallas más grandes que 600px */
+@media (min-width: 601px) {
+  /* .menu-icon-button {
+    display: none !important;
+  } */
+}
+
+/* Estilos responsivos para el Navbar */
+@media screen and (max-width: 450px) {
+  /* Ajuste del tamaño y posición del botón hamburguesa */
+  .menu-icon-button {
+    padding: 8px !important;
+    margin: 0 16px 0 0 !important;
+    color: black !important;
+  }
+}
+
+/* Estilo para ocultar el icono de menú en pantallas grandes */
+.menu-icon {
+  display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+/* Estilos para el contenedor principal */
+.nabvar-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 1.3s ease;
+}
+
+/* Estilos responsivos */
+@media (min-width:600px) and (max-width: 601px) {
+  .nabvar-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .custom-app-bar {
+    max-width: 550px;
+    background-color:#48da0f !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 55px;
+    margin: 25px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 60px;
+    
+  }
+
+  /* .button-container {
+    display: none;
+  } */
+
+  /* .menu-icon {
+    display: block !important;
+  } */
+
+  .custom-toolbar {
+    /* padding: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: flex; */
+    /* justify-content: flex-end; */
+    /* align-items: center; */
+  }
+
+  /* Ajuste del tamaño y posición del botón hamburguesa */
+  /* .menu-icon-button {
+    padding: 8px !important;
+    margin: 0 16px 0 0 !important;
+    color: rgb(154, 29, 29) !important; 
+  } */
+
+  /* Eliminar el margen izquierdo adicional */
+  /* .MuiIconButton-edgeStart {
+    margin-left: 0 !important;
+  } */
+}
+
+/* Ocultar el botón hamburguesa en pantallas más grandes que 600px */
+/* @media (min-width: 601px) {
+  .menu-icon-button {
+    display: none !important;
+  }
+} */
+
+/* Estilos responsivos para el Navbar */
+@media screen and (max-width: 450px) {
+  .custom-app-bar {
+    width: 100% !important;
+    height: 56px !important;
+    border-radius: 0 !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+ 
+
+  /* Ajuste del tamaño y posición del botón hamburguesa */
+  .menu-icon-button {
+    padding: 8px !important;
+    margin: 0 16px 0 0 !important;
+    color: black !important;
+  }
+
+  /* Eliminar el margen izquierdo adicional */
+  .MuiIconButton-edgeStart {
+    margin-left: 0 !important;
+  }
+}
+
+/* Estilo para ocultar el icono de menú en pantallas grandes */
+/* .menu-icon {
+  display: none;
+} */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.divPadreBox{
+  width: 80%;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
+ 
+}
+
+.navbar2{
+  display: flex;
+  flex-direction: row;
+  width: 100%; 
+  background-color: #ff8c00;
+  justify-content: space-between !important;
+  
+}
+
+.one{
+  background-color: aqua;
+}
+.two{
+  background-color: aquamarine;
+  width: 20%;
+}
+
+.three{
+  background-color: yellow;
+}
+
+@media  (width< 600px) {
+.three {
+  display: none; /* Oculta el div con clase three */
+}
+}
+
+@media screen and (max-width: 600px) {
+  .navbar2 {
+    display: flex; /* Asegúrate de que el contenedor sea flex */
+    flex-direction: row; /* Mantén la dirección en fila */
+    justify-content: space-between; /* Asegúrate de que haya espacio entre los elementos */
+    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho */
+    background-color: bisque;
+  }
+ 
+
+  .two {
+    order: 1; /* Primero el div con clase two */
+    flex: 1; /* Permite que el div ocupe espacio */
+  }
+
+  .one {
+    order: 2; /* Luego el div con clase one */
+    flex: 1; /* Permite que el div ocupe espacio */
+  }
+}
+
+
+/* ============================    NAVBAR />     ========================== */
+
+/* ============================    FOOTER    ========================== */
+/* ============================    FOOTER    ========================== */
+/* ============================    FOOTER    ========================== */
+
+.footer {
+  background-color: #03045e !important;
+  color: rgb(253, 250, 250) !important;
+  padding: 20px 0 !important;
+  display: block !important; /* Asegura que el footer se muestre */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .footer {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+}
+
+/* Mediana: 768px a 375px */
+@media screen and (min-width: 450px) and (max-width: 767px) {
+  .footer {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
+/* Chica: menor a 375px */
+@media screen and (max-width: 450px) {
+  .footer {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
+}
+
+
+
+
+
+
+/* ============================    FRAMES PARA OTROS TRABAJOS    ========================== */
+/* ============================    FRAMES PARA OTROS TRABAJOS    ========================== */
+/* ============================    FRAMES PARA OTROS TRABAJOS    ========================== */
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+}
+
+/* Mediana: 768px a 375px */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+}
+
+/* Chica: menor a 375px */
+@media screen and (max-width: 374px) {
+}
+
+/* ============================   Flexbox ========================== */
+
+/* Un resumen :  
+  1) Neceitamos un contenedor FLEXBOX-CONTAINER que envuelva un conjunto de FLEXBOX-ITEMS
+  2) Usamos las propiedades Justify-content y Align-items apra alinear esos Items dentro del Container
+  3) Usamos flex-shrink , flex-grow y flex-basis para ajustar mis items individualmente
+
+*/
+
+/* ============================   Flexbox ========================== */
+
+.flexbox-container {
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  background-color: antiquewhite;
+}
+
+.flexbox-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid grey;
+  background-color: aquamarine;
+}
+
+.flexbox-item1 {
+  min-height: 100px;
+}
+.flexbox-item2 {
+  min-height: 200px;
+}
+.flexbox-item3 {
+  min-height: 300px;
+}
+
+/* ============================   Flexbox 2 ========================== */
+
+.flexbox-container2 {
+  display: flex;
+  justify-content: center;
+
+  background-color: cadetblue;
+}
+
+.flexbox-item4 {
+  min-height: 200px;
+}
+.flexbox-item5 {
+  min-height: 200px;
+  flex-shrink: 2;
+}
+.flexbox-item6 {
+  min-height: 200px;
+  flex-grow: 1;
+}
+
+/* ============================   Flexbox 3 ========================== */
+
+.flexbox-container3 {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+
+  background-color: rgb(168, 166, 32);
+}
+
+.flexbox-item {
+  margin: 10px;
+  border: 3px solid grey;
+  background-color: aquamarine;
+}
+
+.flexbox-item7 {
+  min-height: 200px;
+  flex-shrink: 2;
+  align-self: flex-end;
+  aspect-ratio: 1 / 1;
+}
+.flexbox-item8 {
+  min-height: 200px;
+  align-self: center;
+  flex-basis: 1;
+  aspect-ratio: 4 / 3;
+}
+.flexbox-item9 {
+  min-height: 200px;
+  flex-grow: 1;
+}
+
+/*=====================      sticky position      ==================== */
+
+.letter {
+  position: sticky;
+  top: 0;
+  background-color: #ff8c00;
+  height: 20px;
+}
+
+/*=====================      sticky position      ==================== */

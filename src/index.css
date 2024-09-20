@@ -1,0 +1,45 @@
+/* ============================    ESTILOS GENERALES   ========================== */
+
+@font-face {
+    font-family: 'Canopee';
+    src: url('./fonts/Canopee.woff2') format('woff2'),
+         url('./fonts/Canopee.woff') format('woff'),
+         url('./fonts/Canopee.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  background-color: rgba(234, 103, 103, 0.638);
+  font-family: 'Canopee'
+}
+
+/* ============================    ESTILOS GENERALES   ========================== */
+
+
+
+/* --------------------------------------------------       Imagen fondo Hero          ------------------------------------------------------------ */
+
+.sebastian {
+  height: 100vh;
+  background-image: url("/public/inicio.jpg");
+  /* background-position: 50% 50%, 50% 50%; */
+  background-repeat: no-repeat;
+  animation: diagonalMovement 5s forwards;
+  position: relative; /* Asegúrate de que el contenedor sea relativo */
+  margin-top: -40px;
+}
+
+
+
+.navbarSpace{
+  height: 105px;
+  background-color: rgba(255, 0, 0, 0);
+}
+
+/* Agregar estilos para pantallas menores a 601px */
+@media (max-width: 599px) {
+  .navbarSpace {
+    height: 60px; /* Cambiar altura a 60px */
+  }
+}
