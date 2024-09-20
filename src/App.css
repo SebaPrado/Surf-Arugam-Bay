@@ -186,43 +186,10 @@
     padding-top: 60px;
     
   }
-
-  /* .button-container {
-    display: none;
-  } */
-
-  /* .menu-icon {
-    display: block !important;
-  } */
-
-  .custom-toolbar {
-    /* padding: 0 !important;
-    width: 100%;
-    height: 100%;
-    display: flex; */
-    /* justify-content: flex-end; */
-    /* align-items: center; */
-  }
-
-  /* Ajuste del tamaño y posición del botón hamburguesa */
-  /* .menu-icon-button {
-    padding: 8px !important;
-    margin: 0 16px 0 0 !important;
-    color: rgb(154, 29, 29) !important; 
-  } */
-
-  /* Eliminar el margen izquierdo adicional */
-  /* .MuiIconButton-edgeStart {
-    margin-left: 0 !important;
-  } */
+  
 }
 
-/* Ocultar el botón hamburguesa en pantallas más grandes que 600px */
-/* @media (min-width: 601px) {
-  .menu-icon-button {
-    display: none !important;
-  }
-} */
+
 
 /* Estilos responsivos para el Navbar */
 @media screen and (max-width: 450px) {
@@ -279,17 +246,15 @@
   
 }
 
-.one{
-  /* background-color: aqua; */
-}
+
 .two{
-  /* background-color: aquamarine; */
-  width: 30%;
+  background-color: aquamarine;
+  width: 0%;
 }
 
 .three{
   /* background-color: yellow; */
-  width: 15%;
+  width: 20%;
   display: flex;
  justify-content: center;
 }
@@ -323,6 +288,7 @@
 
 .logo{
   /* background-color: aqua; */
+  width: 25%;
 }
 
 .button1{
@@ -335,6 +301,7 @@
   font-weight: 700;
   line-height: 21px;
   letter-spacing: 0.6px;
+  border: "none";  
 }
 
 

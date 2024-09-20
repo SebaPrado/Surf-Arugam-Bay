@@ -47,8 +47,6 @@ function Navbar() {
     setDrawerOpen(open);
   };
 
- 
-
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -58,12 +56,14 @@ function Navbar() {
 
   const menuItems = [
     { label: "Find Instructors ", onClick: () => scrollToSection("find") },
-    { label: "Join as Instructor", onClick: () => scrollToSection("instructors") },
+    {
+      label: "Join as Instructor",
+      onClick: () => scrollToSection("instructors"),
+    },
     { label: "Packages ", onClick: () => scrollToSection("packages") },
     { label: "FAQs ", onClick: () => scrollToSection("questions") },
     { label: "Blog ", onClick: () => scrollToSection("blog") },
     { label: "Contact us ", onClick: () => scrollToSection("contact") },
-
   ];
 
   return (
@@ -76,14 +76,32 @@ function Navbar() {
               sx={{
                 backgroundColor: navbarColor,
                 transition: "background-color 1.5s ease", // Agrega esta línea para la transición
-                boxShadow: 'none'
+                boxShadow: "none",
               }}
               elevation={0}
             >
               <Toolbar className="custom-toolbar navbar2">
-                <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
-                  <img src="/arcticons_srilankan.png" alt="logo" style={{ marginRight: '10px' }} />
-                  <p style={{ paddingTop: '14px' }}>Arugam Bay</p>
+                <div
+                  className="logo"
+                  style={{ display: "flex", alignItems: "center" }}
+                >
+                  <img
+                    src="/arcticons_srilankan.png"
+                    alt="logo"
+                    style={{ marginRight: "10px" }}
+                  />
+                  <p
+                    style={{
+                      paddingTop: "14px",
+                      fontFamily: "Canopee",
+                      fontSize: "22px",
+                      fontWeight: 400,
+                      lineHeight: "42.98px",
+                      textAlign: "center",
+                    }}
+                  >
+                    Arugam Bay Surf
+                  </p>
                 </div>
 
                 <div className="one">
@@ -136,7 +154,7 @@ function Navbar() {
                   </Box>
                 </div>
                 <div className="three">
-                  <button className="button1">I am an Instructor</button>
+                  <button className="button1" style={{ border: "none" }}>I am am Instructor</button>
                 </div>
               </Toolbar>
             </AppBar>
