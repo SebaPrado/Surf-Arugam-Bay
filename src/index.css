@@ -10,6 +10,7 @@
 }
 
 body {
+  width: 100vw;
   background-color: rgba(234, 103, 103, 0.638);
   font-family: 'Canopee'
 }
@@ -18,27 +19,71 @@ body {
 
 
 
-/* --------------------------------------------------       Imagen fondo Hero          ------------------------------------------------------------ */
+/* --------------------------------------------------       Hero Section          ------------------------------------------------------------ */
 
-.sebastian {
-  height: 100vh;
+.heroSeccion {
+  max-height: 100vh ;
   background-image: url("/public/inicio.jpg");
-  /* background-position: 50% 50%, 50% 50%; */
-  background-repeat: no-repeat;
-  animation: diagonalMovement 5s forwards;
-  position: relative; /* Asegúrate de que el contenedor sea relativo */
+  background-size: no-repeat;
   margin-top: -40px;
 }
 
-
-
-.navbarSpace{
-  height: 105px;
+.columnsFlexContainerHero{
+  display: flex;
+  flex-direction: row;
 }
+
+.leftColHero{
+  background-color: green;
+  margin-top: var(--navbar-height); 
+  box-sizing: border-box;
+  /* height: 90vh */
+}
+
+.rightColHero{
+background-color: chartreuse;
+margin-top: 75px;
+
+}
+
+h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 110px;
+  font-weight: 600;
+  line-height: 110px;
+  letter-spacing: -0.05em;
+  text-align: left;
+  margin-bottom: 65px;
+  margin-right: 10vw;
+  margin-top: 6vh;
+}
+
+.joinTheVibrant{
+font-family: 'Open Sans', sans-serif;
+font-size: 20px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0.01em;
+text-align: left;
+
+
+}
+
+.contactInstructorsContainer{
+margin-top: 40px;
+}
+
+
+
+/* .navbarSpace{
+  display: block;
+  height: 88px;
+  max-width: 100px !important;
+} */
 
 /* Agregar estilos para pantallas menores a 601px */
-@media (max-width: 599px) {
+/* @media (max-width: 599px) {
   .navbarSpace {
-    height: 60px; /* Cambiar altura a 60px */
+    height: 0px;
   }
-}
+} */

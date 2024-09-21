@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Class } from "@mui/icons-material";
 
 const theme = createTheme({
   typography: {
@@ -33,8 +34,28 @@ function Navbar() {
       }
     };
 
+    const updateNavbarHeight = () => {
+      const navbarHeight = document.querySelector('.custom-toolbar').offsetHeight;
+      document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+    };
+
+    // Establecer la altura inicial del Navbar
+    updateNavbarHeight();
+
+    // Usar ResizeObserver para actualizar la altura en cambios de tamaño
+    const resizeObserver = new ResizeObserver(updateNavbarHeight);
+    const navbarElement = document.querySelector('.custom-toolbar');
+    if (navbarElement) {
+      resizeObserver.observe(navbarElement);
+    }
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (navbarElement) {
+        resizeObserver.unobserve(navbarElement);
+      }
+    };
   }, []);
 
   const toggleDrawer = (open) => (event) => {
@@ -56,12 +77,8 @@ function Navbar() {
 
   const menuItems = [
     { label: "Find Instructors ", onClick: () => scrollToSection("find") },
-    {
-      label: "Join as Instructor",
-      onClick: () => scrollToSection("instructors"),
-    },
     { label: "Packages ", onClick: () => scrollToSection("packages") },
-    { label: "FAQs ", onClick: () => scrollToSection("questions") },
+    { label: "FAQs ", onClick: () => scrollToSection("questions"), hidden: true }, // Agregado 'hidden'
     { label: "Blog ", onClick: () => scrollToSection("blog") },
     { label: "Contact us ", onClick: () => scrollToSection("contact") },
   ];
@@ -72,7 +89,6 @@ function Navbar() {
         <ThemeProvider theme={theme}>
           <Box className="nabvar-container  ">
             <AppBar
-              className="navbar"
               sx={{
                 backgroundColor: navbarColor,
                 transition: "background-color 1.5s ease", // Agrega esta línea para la transición
@@ -145,6 +161,7 @@ function Navbar() {
                           fontWeight: 400,
                           lineHeight: "21.79px",
                           textAlign: "center",
+                          display: item.hidden ? { xs: "none", sm: "none", md: "flex", lg: "flex" } : "flex", // Modificado para ocultar
                         }}
                         onClick={item.onClick}
                       >
@@ -154,7 +171,9 @@ function Navbar() {
                   </Box>
                 </div>
                 <div className="three">
-                  <button className="button1" style={{ border: "none" }}>I am am Instructor</button>
+                  <button className="button1" style={{ border: "none" }}>
+                    Join as Instructor
+                  </button>
                 </div>
               </Toolbar>
             </AppBar>
