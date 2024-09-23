@@ -1,89 +1,291 @@
 /* ============================    ESTILOS GENERALES   ========================== */
 
 @font-face {
-    font-family: 'Canopee';
-    src: url('./fonts/Canopee.woff2') format('woff2'),
-         url('./fonts/Canopee.woff') format('woff'),
-         url('./fonts/Canopee.eot') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Canopee";
+  src: url("./fonts/Canopee.woff2") format("woff2"),
+    url("./fonts/Canopee.woff") format("woff"),
+    url("./fonts/Canopee.eot") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  width: 100vw;
-  background-color: rgba(234, 103, 103, 0.638);
-  font-family: 'Canopee'
+  background-color: rgba(0, 0, 0, 0.638);
+  font-family: "Canopee";
+}
+
+:root {
+  --color-principal: #119ebc;
+  --color-secundario: #023047;
 }
 
 /* ============================    ESTILOS GENERALES   ========================== */
 
-
-
 /* --------------------------------------------------       Hero Section          ------------------------------------------------------------ */
 
 .heroSeccion {
-  max-height: 100vh ;
-  background-image: url("/public/inicio.jpg");
-  background-size: no-repeat;
   margin-top: -40px;
+  height: 100vh;
+  position: relative;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
-.columnsFlexContainerHero{
+.heroSeccion::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/public/inicio4.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scaleY(-1); /* Invertido solo la imagen */
+  z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+  opacity: 0.75;
+}
+
+.columnsFlexContainerHero {
   display: flex;
   flex-direction: row;
 }
 
-.leftColHero{
-  background-color: green;
-  margin-top: var(--navbar-height); 
-  box-sizing: border-box;
+.leftColHero {
+  /* background-color: green; */
+  margin-top: var(--navbar-height);
   /* height: 90vh */
 }
 
-.rightColHero{
-background-color: chartreuse;
-margin-top: 75px;
-
+.rightColHero {
+  background-color: chartreuse;
+  margin-top: 75px;
 }
 
-h1{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 110px;
-  font-weight: 600;
-  line-height: 110px;
+h1 {
+  font-family: "Montserrat", sans-serif; /* Cambiado a tipografía Raleway */
+  font-size: 100px;
+  font-weight: 500;
+  line-height: 100px;
   letter-spacing: -0.05em;
   text-align: left;
-  margin-bottom: 65px;
+  margin-bottom: 45px;
   margin-right: 10vw;
   margin-top: 6vh;
+  color: #fcfaf6;
 }
 
-.joinTheVibrant{
-font-family: 'Open Sans', sans-serif;
-font-size: 20px;
-font-weight: 400;
-line-height: 30px;
-letter-spacing: 0.01em;
-text-align: left;
+.heroText {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #ede9de;
+}
 
+.buttonsInHero {
+  margin-top: 33px;
+}
+
+.button2 {
+  width: 176px; /* Ancho fijo */
+  height: 56px; /* Altura fija */
+  padding: 15px 20px; /* Relleno */
+  gap: 15px; /* Espacio entre elementos */
+  border-radius: 4px; /* Bordes redondeados */
+  border: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+}
+
+.button2 p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: center;
+  color: white;
+}
+
+.button3 {
+  width: 176px; /* Ancho fijo */
+  height: 56px; /* Altura fija */
+  padding: 17px 20px; /* Relleno */
+  gap: 10px; /* Espacio entre elementos */
+  border-radius: 4px; /* Bordes redondeados */
+  border: none;
+  background-color: var(--color-principal); /* Usando la variable */
+  margin-left: 70px;
+}
+
+.button3 p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+/* ===============================    Section 2 Contact Instructors   ========================= */
+.contactInstructorsSection {
+  background-color: white;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 100px;
+}
+.containerh2a {
+  text-align: right; /* Alineado a la derecha */
+  
+}
+.h2a {
+  font-family: "Montserrat", sans-serif; /* Cambiado a tipografía Raleway */
+  font-size: 70px; /* Cambiado a 80px */
+  font-weight: 600;
+  line-height: 100px;
+  letter-spacing: -0.05em;
+  color: var(--color-secundario);
+  margin-bottom: 50px;
+  padding-top: 70px;
+  
+  
 
 }
 
-.contactInstructorsContainer{
-margin-top: 40px;
+.contentDivSection2 {
+  /* height: 50vh; */
+  display: flex;
+  justify-content: end;
+  /* background-image: url("/public/seb.jpg"); */
+  background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+  background-position: center; /* Centra la imagen */
+  position: relative; /* Asegura que el gradiente no mueva la imagen */
+  border-radius: 10px;
+
 }
 
+.contentDivSection2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
+  z-index: 1; /* Cambiado a 0 para que esté detrás del contenido */
+}
 
-/* .navbarSpace{
-  display: block;
-  height: 88px;
-  max-width: 100px !important;
-} */
+.textSection2 p {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  color: var(--color-secundario) ;
+  text-align: justify;
+}
 
-/* Agregar estilos para pantallas menores a 601px */
-/* @media (max-width: 599px) {
-  .navbarSpace {
-    height: 0px;
-  }
-} */
+/* --------------------------------------------------------- */
+
+.columnaDerecha{
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  /* justify-content: space-between; */
+  /* align-items: flex-end; */
+
+}
+
+.buttonsInSection2{
+  display: flex;
+  justify-content:center;
+  margin-top: 40px;
+}
+.button4{
+ background-color: #119ebc;
+ width: 176px; /* Ancho fijo */
+ height: 56px; /* Altura fija */
+ padding: 17px 20px; /* Relleno */
+ gap: 10px; /* Espacio entre elementos */
+ border-radius: 4px; /* Bordes redondeados */
+ border: none;
+ background-color: var(--color-principal); /* Usando la variable */
+}
+
+.button4 p{
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.button5{
+  margin-left: 70px;
+  width: 176px; /* Ancho fijo */
+  height: 56px; /* Altura fija */
+  padding: 15px 20px; /* Relleno */
+  gap: 15px; /* Espacio entre elementos */
+  border-radius: 4px; /* Bordes redondeados */
+  border: 1px solid rgb(0, 0, 0);
+  background-color: transparent;
+}
+.button5 p{
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: center;
+  color:var(--color-secundario);
+
+}
+
+/* --------------------------------------------------------- */
+
+.columnaIzquierda{
+  display: flex;
+  justify-content: start;
+  
+}
+
+.InstructorOfTheMonth {
+  transform: scale(1); /* Aumentar la imagen en un 80% en X y Y */
+  /* ... código existente ... */
+}
+
+.divInstructorOfTheMonth {
+ padding: 10px;
+ border: #023047 solid 1px;
+ border-radius: 5px;
+ background-color: #119dbce0;
+ font-family: "Open Sans", sans-serif;
+ color: white;
+
+  
+  height: 100%; /* Ajusta la altura para que coincida con la columna de la derecha */
+  overflow: hidden; 
+  /* background-color: #023047; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;/* Evita que el contenido se desborde */
+  align-items:center ;
+}
+
+.divInstructorOfTheMonth img{
+  border-radius: 4px;
+  border: solid 1px var(--color-secundario);
+}
+
+/* =========================             Section 3         ============================= = */
+.section3{
+  background-color: #023047;
+}
+.h2Section3 h2{
+  color: white;
+  padding-left: 60px;
+  padding-right: 60px;
+
+}
